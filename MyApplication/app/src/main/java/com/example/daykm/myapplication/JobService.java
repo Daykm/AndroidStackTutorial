@@ -10,7 +10,7 @@ import retrofit.http.POST;
 public interface JobService {
 
     @GET("/jobs")
-    List<Job> listJobs();
+    void listJobs(Callback<List<Job>> callback);
 
     @POST("/jobs")
     void createJob(@Body Job job, Callback<Job> callback);
